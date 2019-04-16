@@ -1,14 +1,17 @@
 @AbapCatalog.sqlViewName: '/MINDSET/IGWERLG'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Gateway error log interface view'
 define view /MINDSET/I_ERROR_LOG
   as select from /MINDSET/P_ERROR_LOG
+  association [0..1] to I_User as _User on _User.UserID = UserName
 {
   key OperationId,
   key SubNumber,
+  @ObjectModel.foreignKey.association: '_User'
       UserName,
+  @Semantics.time: true
       TimeStamp,
       ErrorCount,
       FirstTimeStamp,
@@ -50,5 +53,6 @@ define view /MINDSET/I_ERROR_LOG
       LogLevel,
       ServiceRepository,
       HttpStatusCode,
-      ServiceGroupId
+      ServiceGroupId,
+      _User
 }

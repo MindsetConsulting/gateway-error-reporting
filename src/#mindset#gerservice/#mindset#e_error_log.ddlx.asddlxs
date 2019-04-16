@@ -1,0 +1,30 @@
+@Metadata.layer: #CUSTOMER
+
+@UI: {
+  headerInfo: {
+  typeName: 'Gateway Error Log',
+  typeNamePlural: 'Gateway Error Log',
+  title: { type: #STANDARD, value: 'ErrorLog' }
+  }
+}
+
+annotate view /MINDSET/C_ERROR_LOG with
+{
+  @UI.lineItem: [{position: 10}]
+  @UI.selectionField: [{position: 20}]
+  UserName;
+  @UI.lineItem: [{position: 20}]
+  @UI.selectionField: [{position: 30}]
+  TimeStamp;
+  @UI.lineItem: [{position: 30}]
+  ErrorText;
+  @UI.lineItem: [{position: 40}]
+  Namespace;
+  @UI.lineItem: [{position: 50}]
+  ServiceName;
+  @UI.lineItem: [{position: 60}]
+  IcfNode;
+  @UI.lineItem: [{position: 70}]
+  @UI.selectionField: [{position: 10 }]
+  HttpStatusCode;
+}

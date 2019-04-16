@@ -1,8 +1,9 @@
 @AbapCatalog.sqlViewName: '/MINDSET/CGWERLG'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Gateway error log consumption view'
+@Metadata.allowExtensions: true
 
 @OData.publish: true
 
@@ -11,7 +12,11 @@ define view /MINDSET/C_ERROR_LOG
 {
   key OperationId,
   key SubNumber,
+  
+  
       UserName,
+  
+  
       TimeStamp,
       ErrorCount,
       FirstTimeStamp,
@@ -24,13 +29,16 @@ define view /MINDSET/C_ERROR_LOG
       MessageVariable4,
       Location,
       Channel,
+      
       ErrorText,
       ErrorComponent,
       ErrorPackage,
       SourceProgram,
       SourceInclude,
       SourceLine,
+      
       Namespace,
+      
       ServiceName,
       TransactionId,
       RootContextId,
@@ -47,11 +55,14 @@ define view /MINDSET/C_ERROR_LOG
       ResponseSize,
       ErrorContext,
       HtmlPage,
+      
       IcfNode,
       RequestId,
       ServiceVersion,
       LogLevel,
       ServiceRepository,
+      
+      
       HttpStatusCode,
       ServiceGroupId
 }

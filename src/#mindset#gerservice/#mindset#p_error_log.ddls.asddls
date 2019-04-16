@@ -1,7 +1,7 @@
 @AbapCatalog.sqlViewName: '/MINDSET/PGWERLG'
 @AbapCatalog.compiler.compareFilter: true
 @AbapCatalog.preserveKey: true
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Gateway error log'
 @ClientHandling.type: #CLIENT_DEPENDENT
 define view /MINDSET/P_ERROR_LOG
