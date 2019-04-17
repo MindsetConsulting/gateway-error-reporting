@@ -12,19 +12,27 @@ annotate view /MINDSET/C_ERROR_LOG with
 {
   @UI.lineItem: [{position: 10}]
   @UI.selectionField: [{position: 20}]
+  @Consumption.valueHelpDefinition: [{association: '_User'}]
+  @EndUserText.label: 'User Name'
   UserName;
   @UI.lineItem: [{position: 20}]
   @UI.selectionField: [{position: 30}]
+  @EndUserText.label: 'Time Stamp'
   TimeStamp;
   @UI.lineItem: [{position: 30}]
+  @EndUserText.label: 'Error Text'
   ErrorText;
   @UI.lineItem: [{position: 40}]
+  @EndUserText.label: 'Name Space'
   Namespace;
   @UI.lineItem: [{position: 50}]
+  @EndUserText.label: 'Service Name'
   ServiceName;
   @UI.lineItem: [{position: 60}]
+  @EndUserText.label: 'ICF Node'
   IcfNode;
   @UI.lineItem: [{position: 70}]
   @UI.selectionField: [{position: 10 }]
+  @EndUserText.label: 'Status Code'
   HttpStatusCode;
 }

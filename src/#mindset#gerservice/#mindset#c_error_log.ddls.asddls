@@ -18,6 +18,7 @@ define view /MINDSET/C_ERROR_LOG
   
   
       TimeStamp,
+      @DefaultAggregation: #SUM
       ErrorCount,
       FirstTimeStamp,
       ExpiryDate,
@@ -49,12 +50,14 @@ define view /MINDSET/C_ERROR_LOG
       Destination,
       RequestUri,
       BasisLogNumber,
+      @DefaultAggregation: #SUM
       ContextSize,
+      @DefaultAggregation: #SUM
       CallStackSize,
+      @DefaultAggregation: #SUM
       RequestSize,
+      @DefaultAggregation: #SUM
       ResponseSize,
-      ErrorContext,
-      HtmlPage,
       
       IcfNode,
       RequestId,
@@ -64,5 +67,6 @@ define view /MINDSET/C_ERROR_LOG
       
       
       HttpStatusCode,
-      ServiceGroupId
+      ServiceGroupId,
+      _User
 }

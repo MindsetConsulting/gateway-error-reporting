@@ -3,6 +3,8 @@
 @AbapCatalog.preserveKey: true
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Gateway error log interface view'
+@Analytics.dataCategory: #CUBE
+
 define view /MINDSET/I_ERROR_LOG
   as select from /MINDSET/P_ERROR_LOG
   association [0..1] to I_User as _User on _User.UserID = UserName
@@ -13,6 +15,7 @@ define view /MINDSET/I_ERROR_LOG
       UserName,
   @Semantics.time: true
       TimeStamp,
+      @DefaultAggregation: #SUM
       ErrorCount,
       FirstTimeStamp,
       ExpiryDate,
@@ -35,18 +38,21 @@ define view /MINDSET/I_ERROR_LOG
       TransactionId,
       RootContextId,
       ConnectionId,
+      @DefaultAggregation: #SUM
       ConnectionCount,
       TerminalId,
       RemoteAddress,
       Destination,
       RequestUri,
       BasisLogNumber,
+      @DefaultAggregation: #SUM
       ContextSize,
+      @DefaultAggregation: #SUM
       CallStackSize,
+      @DefaultAggregation: #SUM
       RequestSize,
+      @DefaultAggregation: #SUM
       ResponseSize,
-      ErrorContext,
-      HtmlPage,
       IcfNode,
       RequestId,
       ServiceVersion,
