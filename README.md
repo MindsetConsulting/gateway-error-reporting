@@ -1,2 +1,2 @@
 # gateway-error-reporting
-Gateway Error Reporting ALP
+Gateway Error Reporting base CDS views and annotations
