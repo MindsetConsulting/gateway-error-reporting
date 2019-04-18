@@ -18,6 +18,8 @@ define view /MINDSET/C_ERROR_LOG
   
   
       TimeStamp,
+      ErrorDate,
+      DATS_DAYS_BETWEEN(ErrorDate, CurrentDate) as DaysAgo,
       @DefaultAggregation: #SUM
       ErrorCount,
       FirstTimeStamp,

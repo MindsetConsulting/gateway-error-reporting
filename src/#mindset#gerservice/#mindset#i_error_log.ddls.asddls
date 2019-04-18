@@ -15,6 +15,9 @@ define view /MINDSET/I_ERROR_LOG
       UserName,
   @Semantics.time: true
       TimeStamp,
+      @Semantics.businessDate.at: true
+      TSTMP_TO_DATS(cast(TimeStamp as abap.dec(15,0)), abap_system_timezone( $session.client,'NULL' ), $session.client, 'NULL') as ErrorDate,
+      CurrentDate,
       @DefaultAggregation: #SUM
       ErrorCount,
       FirstTimeStamp,

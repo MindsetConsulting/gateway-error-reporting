@@ -11,6 +11,7 @@ define view /MINDSET/P_ERROR_LOG
   key subno           as SubNumber,
       username        as UserName,
       timestamp       as TimeStamp,
+      $session.system_date as CurrentDate,
       error_count     as ErrorCount,
       first_tstmp     as FirstTimeStamp,
       expiry_date     as ExpiryDate,
