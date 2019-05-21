@@ -26,6 +26,7 @@ RISK LEVEL HARMLESS.
       "!  In this method test data is inserted into the generated double(s) and the test is executed and
       "!  the results should be asserted with the actuals.
       returns_data FOR TESTING RAISING cx_static_check,
+      status_severity_for_404 FOR TESTING RAISING cx_static_check,
       status_severity_for_500 FOR TESTING RAISING cx_static_check.
 
 ENDCLASS.
@@ -78,6 +79,18 @@ CLASS ltc_/mindset/c_error_log IMPLEMENTATION.
     cl_abap_unit_assert=>assert_differs( act = act_length exp = 0 ).
 
     cl_abap_unit_assert=>assert_equals( act = act_results[ 1 ]-statuscodeseverity exp = 4 ).
+  ENDMETHOD.
+
+    METHOD status_severity_for_404.
+    prepare_testdata_set( ).
+    SELECT * FROM /mindset/c_error_log INTO TABLE @act_results
+        WHERE httpstatuscode = '404'.
+
+    DATA(act_length) = lines( act_results ).
+
+    cl_abap_unit_assert=>assert_differs( act = act_length exp = 0 ).
+
+    cl_abap_unit_assert=>assert_equals( act = act_results[ 1 ]-statuscodeseverity exp = 1 ).
   ENDMETHOD.
 
 ENDCLASS.
