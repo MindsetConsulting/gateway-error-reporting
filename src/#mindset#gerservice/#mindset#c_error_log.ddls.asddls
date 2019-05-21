@@ -70,7 +70,8 @@ define view /MINDSET/C_ERROR_LOG
       
       HttpStatusCode,
       case HttpStatusCode
-        when '500' then 3
+        when '500' then 2
+        when '404' then 1
         else 0
       end as StatusCodeSeverity,
       
