@@ -1,13 +1,13 @@
- class /MINDSET/ZERROR_LOG_TEST  definition
- public
- final
- create public
- for testing.
+CLASS /MINDSET/ZERROR_LOG_TEST  DEFINITION
+ PUBLIC
+ FINAL
+ CREATE PUBLIC
+ FOR TESTING.
 
- public section.
- protected section.
- private section.
- endclass.
+  PUBLIC SECTION.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
 
- class /MINDSET/ZERROR_LOG_TEST  implementation.
- endclass.
+CLASS /MINDSET/ZERROR_LOG_TEST IMPLEMENTATION.
+ENDCLASS.

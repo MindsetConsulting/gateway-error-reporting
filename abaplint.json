@@ -119,7 +119,7 @@
       "exclude": []
     },
     "keywords_upper": {
-      "enabled": true,
+      "enabled": false,
       "exclude": [],
       "ignoreExceptions": true,
       "ignoreLowerClassImplmentationStatement": true,
@@ -195,10 +195,10 @@
     "object_naming": {
       "enabled": true,
       "exclude": [],
-      "clas": "^ZC(L|X)\\_ABAPGIT\\_",
-      "intf": "^ZIF\\_ABAPGIT\\_",
-      "prog": "^ZABAPGIT",
-      "fugr": "^ZABAPGIT",
+      "clas": "^/MINDSET/Z",
+      "intf": "^/MINDSET/Z",
+      "prog": "^Z",
+      "fugr": "^Z",
       "tabl": "^Z",
       "ttyp": "^Z",
       "dtel": "^Z",
