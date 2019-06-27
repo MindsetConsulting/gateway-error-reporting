@@ -78,7 +78,7 @@ CLASS ltc_/mindset/c_error_log IMPLEMENTATION.
 
     cl_abap_unit_assert=>assert_differs( act = act_length exp = 0 ).
 
-    cl_abap_unit_assert=>assert_equals( act = act_results[ 1 ]-statuscodeseverity exp = 4 ).
+    cl_abap_unit_assert=>assert_equals( act = act_results[ 1 ]-statuscodeseverity exp = 2 ).
   ENDMETHOD.
 
     METHOD status_severity_for_404.
